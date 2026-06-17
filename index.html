@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Martes 16 de junio del 2026 - poema</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    font-family:'Montserrat',sans-serif;
+    background:
+        radial-gradient(circle at top, rgba(255,255,255,0.12), transparent 35%),
+        linear-gradient(180deg,#070a18 0%, #121932 45%, #24142c 100%);
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* Estrellas */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+    radial-gradient(2px 2px at 20px 30px,#ffffff,transparent),
+    radial-gradient(2px 2px at 120px 80px,#fff7d6,transparent),
+    radial-gradient(1.5px 1.5px at 200px 140px,#ffffff,transparent),
+    radial-gradient(2px 2px at 300px 60px,#ffe6f0,transparent),
+    radial-gradient(2px 2px at 400px 150px,#ffffff,transparent);
+    background-size:500px 250px;
+    opacity:.45;
+    animation:twinkle 10s linear infinite;
+    pointer-events:none;
+}
+
+@keyframes twinkle{
+    from{transform:translateY(0);}
+    to{transform:translateY(-250px);}
+}
+
+/* Luna */
+.moon{
+    position:fixed;
+    top:60px;
+    right:80px;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:
+    radial-gradient(circle at 35% 35%, #fffef6, #f6e6b6 70%);
+    box-shadow:
+    0 0 30px rgba(255,243,196,.7),
+    0 0 60px rgba(255,243,196,.4);
+}
+
+/* Corazones decorativos */
+.heart{
+    position:fixed;
+    color:rgba(255,200,220,.12);
+    font-size:28px;
+    animation:float 10s ease-in-out infinite;
+}
+
+.heart:nth-child(2){
+    top:18%;
+    left:6%;
+}
+
+.heart:nth-child(3){
+    bottom:15%;
+    right:8%;
+    animation-delay:2s;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-20px);
+    }
+}
+
+/* Contenedor */
+.container{
+    max-width:900px;
+    width:100%;
+    position:relative;
+    z-index:2;
+}
+
+.poem-box{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:35px;
+    padding:60px;
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.45),
+    inset 0 0 20px rgba(255,255,255,.05);
+    position:relative;
+    overflow:hidden;
+}
+
+/* Bordes románticos */
+.poem-box::before,
+.poem-box::after{
+    content:"✦";
+    position:absolute;
+    font-size:40px;
+    color:rgba(255,220,190,.35);
+}
+
+.poem-box::before{
+    top:20px;
+    left:25px;
+}
+
+.poem-box::after{
+    bottom:20px;
+    right:25px;
+}
+
+.title{
+    font-family:'Cinzel',serif;
+    text-align:center;
+    color:#fff5db;
+    font-size:2.3rem;
+    letter-spacing:3px;
+    line-height:1.5;
+    margin-bottom:15px;
+    text-shadow:0 0 20px rgba(255,236,188,.45);
+}
+
+.subtitle{
+    text-align:center;
+    color:#ffd8ea;
+    margin-bottom:45px;
+    letter-spacing:2px;
+    font-size:.95rem;
+}
+
+.divider{
+    width:120px;
+    height:2px;
+    margin:0 auto 45px;
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(255,226,197,.8),
+        transparent
+    );
+}
+
+.poem{
+    color:#f9f6ff;
+    font-size:1.12rem;
+    line-height:2.15;
+    text-align:justify;
+    white-space:pre-line;
+}
+
+.poem p{
+    margin-bottom:22px;
+}
+
+.signature{
+    margin-top:55px;
+    text-align:center;
+    color:#ffe4ef;
+}
+
+.signature .love{
+    font-family:'Cinzel',serif;
+    font-size:1.3rem;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+.signature .forever{
+    font-size:1rem;
+    opacity:.9;
+}
+
+.footer{
+    margin-top:40px;
+    text-align:center;
+    color:rgba(255,240,250,.7);
+    font-size:.9rem;
+    letter-spacing:1px;
+}
+
+@media(max-width:768px){
+
+    .poem-box{
+        padding:40px 28px;
+        border-radius:28px;
+    }
+
+    .title{
+        font-size:1.7rem;
+    }
+
+    .poem{
+        font-size:1rem;
+        line-height:2;
+    }
+
+    .moon{
+        width:80px;
+        height:80px;
+        top:30px;
+        right:30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="moon"></div>
+
+<div class="heart">❤</div>
+<div class="heart">❤</div>
+
+<div class="container">
+
+    <div class="poem-box">
+
+        <h1 class="title">
+            ERES EL MILAGRO MÁS HERMOSO<br>
+            DE MIS NOCHES
+        </h1>
+
+        <div class="subtitle">
+            Martes, 16 de junio de 2026
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="poem">
+
+<p>Esta noche de martes, 16 de junio de 2026,
+
+cuando la luna parece haberse quedado suspendida sobre el cielo para escuchar las promesas de quienes aman de verdad, cuando el viento nocturno acaricia las ventanas con la delicadeza de un suspiro y las estrellas iluminan el mundo con una ternura silenciosa, vuelvo a descubrir que el pensamiento más hermoso que habita mi vida tiene tu nombre.</p>
+
+<p>Y es que amarte no ha sido una casualidad.
+
+Ha sido el acontecimiento más extraordinario que le ha ocurrido a mi corazón.</p>
+
+<p>Antes de ti existían los días, pero no tenían el mismo color.
+Existían las noches, pero ninguna poseía esta magia.
+Existían las canciones, pero ninguna lograba tocar mi alma como lo hace el simple sonido de tu voz pronunciando mi nombre.</p>
+
+<p>Llegaste sin anunciarte,
+sin advertirme que ibas a cambiarlo todo.</p>
+
+<p>Y, sin embargo, desde que apareciste, el mundo dejó de ser un lugar inmenso e incierto para convertirse en un sitio donde siempre quiero regresar, porque mi hogar dejó de ser una dirección y comenzó a ser el refugio de tus abrazos.</p>
+
+<p>Mi amor hermoso,
+
+si alguna vez alguien me preguntara cómo se siente amar de verdad, no hablaría de teorías ni de definiciones complicadas.</p>
+
+<p>Hablaría de ti.</p>
+
+<p>Hablaría de la forma en que sonríes y logras que desaparezcan mis preocupaciones.
+Hablaría de tu mirada capaz de tranquilizar todas mis tormentas.
+Hablaría de la manera en que tus manos encuentran las mías como si hubieran aprendido, desde antes de existir, que nacieron para permanecer juntas.</p>
+
+<p>Hablaría de tus pequeños detalles.
+
+De tus ocurrencias.
+De tus silencios.
+De tus enojos.
+De tus risas inesperadas.
+De esa manera única que tienes de convertir un instante sencillo en un recuerdo eterno.</p>
+
+<p>Porque te amo completa.
+
+Amo tus virtudes que deslumbran.
+
+Y amo también tus cicatrices invisibles, aquellas que el mundo no ve y que yo quisiera llenar de besos hasta convencerlas de que jamás volverán a doler.</p>
+
+<p>Te amo cuando estás feliz.
+
+Y te amo todavía más cuando estás cansada y aun así continúas luchando con valentía.</p>
+
+<p>Te amo cuando hablas sin detenerte porque estás emocionada.
+
+Y te amo cuando guardas silencio porque sé que incluso en ese silencio existe una profundidad inmensa que solo quienes aman de verdad pueden comprender.</p>
+
+<p>Esta noche quiero confesarte algo.
+
+Todavía siento mariposas cuando pienso en ti.
+
+Todavía sonrío cuando aparece una notificación tuya.
+
+Todavía se acelera mi corazón cuando imagino volver a verte.
+
+Todavía me pareces la mujer más hermosa que han contemplado mis ojos.
+
+Y sospecho que jamás dejará de suceder.</p>
+
+<p>Porque lo nuestro no nació para desgastarse con el tiempo.
+
+Lo nuestro nació para transformarse.
+
+Para crecer.
+
+Para fortalecerse.
+
+Para convertirse en una historia que desafíe la rutina y le demuestre al mundo que el amor verdadero sí existe cuando dos personas deciden elegirse todos los días.</p>
+
+<p>A veces me pregunto cuántas casualidades tuvieron que alinearse para encontrarte.
+
+Cuántos caminos equivocados tuve que recorrer para terminar frente a la persona correcta.
+
+Cuántas estrellas tuvieron que encenderse aquella noche en la que el destino decidió cruzar nuestras vidas.</p>
+
+<p>Y entonces comprendo que ninguna distancia, ningún obstáculo y ninguna dificultad habrían sido suficientes para impedir que llegaras hasta mí.</p>
+
+<p>Porque estabas destinada a convertirte en el amor más grande de mi vida.
+
+Y yo estaba destinado a enamorarme de ti una y otra vez.</p>
+
+<p>Mi princesa hermosa,
+
+si pudiera regalarte algo esta noche, no serían joyas ni tesoros imposibles.</p>
+
+<p>Te regalaría la certeza de mi amor.
+
+La tranquilidad de saber que aquí tienes un corazón que te elige.
+
+Que te admira.
+
+Que te respeta.
+
+Que te desea.
+
+Que sueña contigo.
+
+Y que cada noche agradece al cielo por el privilegio inmenso de compartir este camino a tu lado.</p>
+
+<p>Quisiera besarte lentamente hasta borrar cada tristeza.
+
+Abrazarte tan fuerte que el miedo olvidara cómo regresar.
+
+Mirarte a los ojos y decirte, sin prisas y sin interrupciones, que eres la mujer más extraordinaria que he conocido.</p>
+
+<p>Que eres mi debilidad favorita.
+
+Mi inspiración más constante.
+
+Mi pensamiento inevitable antes de dormir y el deseo más bonito al despertar.</p>
+
+<p>Eres la calma que necesito después de las batallas difíciles.
+
+Eres el incendio dulce que enciende cada rincón de mi alma.
+
+Eres el sueño que jamás quiero abandonar.
+
+Y también la realidad más hermosa que la vida decidió concederme.</p>
+
+<p>Gracias por existir.
+
+Gracias por llegar cuando menos lo esperaba.
+
+Gracias por enseñarme que el amor auténtico no se mide por la perfección, sino por la decisión de permanecer, comprender, cuidar y construir juntos incluso en los días más difíciles.</p>
+
+<p>Y si alguna vez el universo me concediera el privilegio de volver a comenzar mi historia desde el principio, elegiría cometer exactamente los mismos errores, recorrer los mismos caminos y esperar el mismo tiempo...
+
+solo para volver a encontrarte.
+
+Solo para volver a enamorarme de ti.
+
+Solo para volver a sostener tu mano y descubrir, una vez más, que el amor más apasionado, más sincero y más inmenso que existe tiene tu rostro, tu sonrisa y tu nombre.</p>
+
+<p>Porque esta noche de martes, 16 de junio de 2026, bajo este cielo lleno de estrellas que parecen bendecir nuestro destino, puedo decirlo con toda la fuerza de mi alma:</p>
+
+<p>No importa cuántas noches pasen,
+cuántos años transcurran
+o cuántas páginas escriba la vida.</p>
+
+<p>Siempre serás el amor que volvería a elegir.
+
+Mi más hermosa casualidad.
+
+Mi más dulce locura.
+
+Mi más eterno "para siempre".
+
+Y el latido más apasionado que habita en mi corazón.</p>
+
+<p>Te amo infinitamente, mi princesa hermosa.
+
+Hoy.
+Mañana.
+Y en cada noche que el destino tenga la bondad de regalarnos juntos.</p>
+
+        </div>
+
+        <div class="signature">
+            <div class="love">❤ Con todo mi amor ❤</div>
+            <div class="forever">
+                Para la mujer que convirtió mis noches en milagros
+            </div>
+        </div>
+
+        <div class="footer">
+            ✦ Bajo la luna, entre estrellas y suspiros eternos ✦
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
